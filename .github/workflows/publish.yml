@@ -1,3 +1,4 @@
+name: "Publish packs"
 on:
   workflow_dispatch:
     
@@ -8,7 +9,7 @@ jobs:
 
     steps:
       - name: "Checkout repository"
-        uses: github/checkout@v2
+        uses: actions/checkout@v3
 
       - name: "Install latest CodeQL"
         run: |
