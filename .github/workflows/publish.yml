@@ -12,12 +12,15 @@ jobs:
         uses: actions/checkout@v3
 
       - name: "Install latest CodeQL"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh extension install github/gh-codeql
           gh codeql set-version latest
 
       - name: "Build and publish pack"
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          gh codeql pack install java
           gh codeql pack publish java
