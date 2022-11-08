@@ -1,0 +1,22 @@
+on:
+  workflow_dispatch:
+    
+
+jobs:
+  publish_pack:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Checkout repository"
+        uses: github/checkout@v2
+
+      - name: "Install latest CodeQL"
+        run: |
+          gh extension install github/gh-codeql
+          gh codeql set-version latest
+
+      - name: "Build and publish pack"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          gh codeql pack publish java
