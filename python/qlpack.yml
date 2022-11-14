@@ -1,6 +1,6 @@
 name: advanced-security-demo/python-alert-suppression
 version: 0.0.1
 dependencies:
-  "codeql/python-all": "0.4.3"
+  "codeql/python-all": "0.6.3"
 defaultSuite:
   queries: .

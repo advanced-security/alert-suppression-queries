@@ -1,6 +1,6 @@
 name: advanced-security-demo/javascript-alert-suppression
 version: 0.0.1
 dependencies:
-  "codeql/javascript-all": "0.4.3"
+  "codeql/javascript-all": "0.3.3"
 defaultSuite:
   queries: .
