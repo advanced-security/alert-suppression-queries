@@ -1,0 +1,6 @@
+name: advanced-security-demo/csharp-alert-suppression
+version: 0.0.1
+dependencies:
+  "codeql/csharp-all": "0.4.3"
+defaultSuite:
+  queries: .

@@ -1,0 +1,6 @@
+name: advanced-security-demo/go-alert-suppression
+version: 0.0.1
+dependencies:
+  "codeql/go-all": "0.4.3"
+defaultSuite:
+  queries: .
