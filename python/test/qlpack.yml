@@ -1,0 +1,6 @@
+name: advanced-security-demo/python-tests
+dependencies:
+  "codeql/python-all": "0.6.3"
+  "advanced-security-demo/python-alert-suppression": "0.0.1"
+extractor: python
+tests: .

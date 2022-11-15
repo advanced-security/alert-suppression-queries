@@ -1,0 +1,29 @@
+| test.c:1:12:1:20 | // codeql |  codeql | codeql | test.c:1:1:1:20 | // codeql |
+| test.c:2:12:2:43 | // codeql[js/debugger-statement] |  codeql[js/debugger-statement] | codeql[js/debugger-statement] | test.c:2:1:2:43 | // codeql[js/debugger-statement] |
+| test.c:3:12:3:74 | // codeql[js/debugger-statement, js/invocation-of-non-function] |  codeql[js/debugger-statement, js/invocation-of-non-function] | codeql[js/debugger-statement, js/invocation-of-non-function] | test.c:3:1:3:74 | // codeql[js/debugger-statement, js/invocation-of-non-function] |
+| test.c:4:12:4:35 | // codeql[@tag:nullness] |  codeql[@tag:nullness] | codeql[@tag:nullness] | test.c:4:1:4:35 | // codeql[@tag:nullness] |
+| test.c:5:12:5:57 | // codeql[@tag:nullness,js/debugger-statement] |  codeql[@tag:nullness,js/debugger-statement] | codeql[@tag:nullness,js/debugger-statement] | test.c:5:1:5:57 | // codeql[@tag:nullness,js/debugger-statement] |
+| test.c:6:12:6:41 | // codeql[@expires:2017-06-11] |  codeql[@expires:2017-06-11] | codeql[@expires:2017-06-11] | test.c:6:1:6:41 | // codeql[@expires:2017-06-11] |
+| test.c:7:1:7:74 | // codeql[js/invocation-of-non-function] because I know better than codeql |  codeql[js/invocation-of-non-function] because I know better than codeql | codeql[js/invocation-of-non-function] | test.c:7:1:7:74 | // codeql[js/invocation-of-non-function] because I know better than codeql |
+| test.c:8:1:8:20 | // codeql: blah blah |  codeql: blah blah | codeql | test.c:8:1:8:20 | // codeql: blah blah |
+| test.c:9:1:9:34 | // codeql blah blah #falsepositive |  codeql blah blah #falsepositive | codeql | test.c:9:1:9:34 | // codeql blah blah #falsepositive |
+| test.c:10:1:10:42 | // codeql  [js/invocation-of-non-function] |  codeql  [js/invocation-of-non-function] | codeql  [js/invocation-of-non-function] | test.c:10:1:10:42 | // codeql  [js/invocation-of-non-function] |
+| test.c:11:1:11:12 | /* codeql */ |  codeql  | codeql | test.c:11:1:11:12 | /* codeql */ |
+| test.c:12:1:12:11 | // codeql[] |  codeql[] | codeql[] | test.c:12:1:12:11 | // codeql[] |
+| test.c:14:1:14:9 | // codeql |  codeql | codeql | test.c:14:1:14:9 | // codeql |
+| test.c:15:1:15:9 | //\tcodeql | \tcodeql | codeql | test.c:15:1:15:9 | //\tcodeql |
+| test.c:16:1:16:33 | // codeql\t[js/debugger-statement] |  codeql\t[js/debugger-statement] | codeql\t[js/debugger-statement] | test.c:16:1:16:33 | // codeql\t[js/debugger-statement] |
+| test.c:19:1:19:14 | // foo; codeql |  foo; codeql | codeql | test.c:19:1:19:14 | // foo; codeql |
+| test.c:20:1:20:37 | // foo; codeql[js/debugger-statement] |  foo; codeql[js/debugger-statement] | codeql[js/debugger-statement] | test.c:20:1:20:37 | // foo; codeql[js/debugger-statement] |
+| test.c:22:1:22:36 | // foo codeql[js/debugger-statement] |  foo codeql[js/debugger-statement] | codeql[js/debugger-statement] | test.c:22:1:22:36 | // foo codeql[js/debugger-statement] |
+| test.c:24:1:24:40 | // foo codeql[js/debugger-statement] bar |  foo codeql[js/debugger-statement] bar | codeql[js/debugger-statement] | test.c:24:1:24:40 | // foo codeql[js/debugger-statement] bar |
+| test.c:25:1:25:10 | // codeql! |  codeql! | codeql | test.c:25:1:25:10 | // codeql! |
+| test.c:26:1:26:32 | // codeql[js/debugger-statement] |  codeql[js/debugger-statement] | codeql[js/debugger-statement] | test.c:26:1:26:32 | // codeql[js/debugger-statement] |
+| test.c:27:1:27:74 | // codeql[js/debugger-statement] and codeql[js/invocation-of-non-function] |  codeql[js/debugger-statement] and codeql[js/invocation-of-non-function] | codeql[js/debugger-statement] | test.c:27:1:27:74 | // codeql[js/debugger-statement] and codeql[js/invocation-of-non-function] |
+| test.c:27:1:27:74 | // codeql[js/debugger-statement] and codeql[js/invocation-of-non-function] |  codeql[js/debugger-statement] and codeql[js/invocation-of-non-function] | codeql[js/invocation-of-non-function] | test.c:27:1:27:74 | // codeql[js/debugger-statement] and codeql[js/invocation-of-non-function] |
+| test.c:28:1:28:40 | // codeql[js/debugger-statement]; codeql |  codeql[js/debugger-statement]; codeql | codeql | test.c:28:1:28:40 | // codeql[js/debugger-statement]; codeql |
+| test.c:28:1:28:40 | // codeql[js/debugger-statement]; codeql |  codeql[js/debugger-statement]; codeql | codeql[js/debugger-statement] | test.c:28:1:28:40 | // codeql[js/debugger-statement]; codeql |
+| test.c:29:1:29:14 | /* codeql[] */ |  codeql[]  | codeql[] | test.c:29:1:29:14 | /* codeql[] */ |
+| test.c:30:1:30:43 | /* codeql[js/invocation-of-non-function] */ |  codeql[js/invocation-of-non-function]  | codeql[js/invocation-of-non-function] | test.c:30:1:30:43 | /* codeql[js/invocation-of-non-function] */ |
+| test.c:36:1:36:57 | /* codeql[@tag:nullness,js/invocation-of-non-function] */ |  codeql[@tag:nullness,js/invocation-of-non-function]  | codeql[@tag:nullness,js/invocation-of-non-function] | test.c:36:1:36:57 | /* codeql[@tag:nullness,js/invocation-of-non-function] */ |
+| test.c:37:1:37:27 | /* codeql[@tag:nullness] */ |  codeql[@tag:nullness]  | codeql[@tag:nullness] | test.c:37:1:37:27 | /* codeql[@tag:nullness] */ |

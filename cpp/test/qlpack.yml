@@ -1,0 +1,6 @@
+name: advanced-security-demo/cpp-tests
+dependencies:
+  "codeql/cpp-all": "0.4.3"
+  "advanced-security-demo/cpp-alert-suppression": "0.0.1"
+extractor: cpp
+tests: .

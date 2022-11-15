@@ -11,5 +11,5 @@ To include them in you analysis, you can reference them in your workflows as fol
       with:
         languages: ${{ matrix.language }}
         queries: security-and-quality
-        packs: +advanced-security-demo/java-alert-suppression
+        packs: +advanced-security-demo/${{ matrix.languages }}-alert-suppression
 ```

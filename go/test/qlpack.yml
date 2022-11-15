@@ -1,0 +1,6 @@
+name: advanced-security-demo/go-tests
+dependencies:
+  "codeql/go-all": "0.3.3"
+  "advanced-security-demo/go-alert-suppression": "0.0.1"
+extractor: go
+tests: .

@@ -49,18 +49,18 @@ abstract class LineSuppressionComment extends SuppressionComment {
 }
 
 /**
- * An lgtm suppression comment.
+ * An codeql suppression comment.
  */
-class LgtmSuppressionComment extends LineSuppressionComment {
+class CodeQLSuppressionComment extends LineSuppressionComment {
   string annotation;
 
-  LgtmSuppressionComment() {
+  CodeQLSuppressionComment() {
     exists(string all | all = this.getContents() |
-      // match `lgtm[...]` anywhere in the comment
-      annotation = all.regexpFind("(?i)\\blgtm\\s*\\[[^\\]]*\\]", _, _)
+      // match `codeql[...]` anywhere in the comment
+      annotation = all.regexpFind("(?i)\\bcodeql\\s*\\[[^\\]]*\\]", _, _)
       or
-      // match `lgtm` at the start of the comment and after semicolon
-      annotation = all.regexpFind("(?i)(?<=^|;)\\s*lgtm(?!\\B|\\s*\\[)", _, _).trim()
+      // match `codeql` at the start of the comment and after semicolon
+      annotation = all.regexpFind("(?i)(?<=^|;)\\s*codeql(?!\\B|\\s*\\[)", _, _).trim()
     )
   }
 
@@ -69,12 +69,12 @@ class LgtmSuppressionComment extends LineSuppressionComment {
 }
 
 /**
- * A noqa suppression comment. Both pylint and pyflakes respect this, so lgtm ought to too.
+ * A noqa suppression comment. Both pylint and pyflakes respect this, so codeql ought to too.
  */
 class NoqaSuppressionComment extends LineSuppressionComment {
   NoqaSuppressionComment() { this.getContents().toLowerCase().regexpMatch("\\s*noqa\\s*([^:].*)?") }
 
-  override string getAnnotation() { result = "lgtm" }
+  override string getAnnotation() { result = "codeql" }
 }
 
 /**

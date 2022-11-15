@@ -18,11 +18,11 @@ class SuppressionComment extends Ruby::Comment {
     // suppression comments must be single-line
     this.getLocation().getStartLine() = this.getLocation().getEndLine() and
     exists(string text | text = commentText(this) |
-      // match `lgtm[...]` anywhere in the comment
-      annotation = text.regexpFind("(?i)\\blgtm\\s*\\[[^\\]]*\\]", _, _)
+      // match `codeql[...]` anywhere in the comment
+      annotation = text.regexpFind("(?i)\\bcodeql\\s*\\[[^\\]]*\\]", _, _)
       or
       // match `lgtm` at the start of the comment and after semicolon
-      annotation = text.regexpFind("(?i)(?<=^|;)\\s*lgtm(?!\\B|\\s*\\[)", _, _).trim()
+      annotation = text.regexpFind("(?i)(?<=^|;)\\s*codeql(?!\\B|\\s*\\[)", _, _).trim()
     )
   }
 

@@ -19,11 +19,11 @@ class SuppressionComment extends Locatable {
     // suppression comments must be single-line
     not text.matches("%\n%") and
     (
-      // match `lgtm[...]` anywhere in the comment
-      annotation = text.regexpFind("(?i)\\blgtm\\s*\\[[^\\]]*\\]", _, _)
+      // match `codeql[...]` anywhere in the comment
+      annotation = text.regexpFind("(?i)\\bcodeql\\s*\\[[^\\]]*\\]", _, _)
       or
-      // match `lgtm` at the start of the comment and after semicolon
-      annotation = text.regexpFind("(?i)(?<=^|;)\\s*lgtm(?!\\B|\\s*\\[)", _, _).trim()
+      // match `codeql` at the start of the comment and after semicolon
+      annotation = text.regexpFind("(?i)(?<=^|;)\\s*codeql(?!\\B|\\s*\\[)", _, _).trim()
     )
   }
 

@@ -1,0 +1,30 @@
+| test.go:7:8:7:16 | comment |  codeql | codeql | test.go:7:1:7:16 | suppression range |
+| test.go:8:8:8:41 | comment |  codeql[go/redundant-assignment] | codeql[go/redundant-assignment] | test.go:8:1:8:41 | suppression range |
+| test.go:9:8:9:41 | comment |  codeql[go/redundant-assignment] | codeql[go/redundant-assignment] | test.go:9:1:9:41 | suppression range |
+| test.go:10:8:10:65 | comment |  codeql[go/redundant-assignment, go/redundant-operation] | codeql[go/redundant-assignment, go/redundant-operation] | test.go:10:1:10:65 | suppression range |
+| test.go:11:8:11:31 | comment |  codeql[@tag:nullness] | codeql[@tag:nullness] | test.go:11:1:11:31 | suppression range |
+| test.go:12:8:12:55 | comment |  codeql[@tag:nullness,go/redundant-assignment] | codeql[@tag:nullness,go/redundant-assignment] | test.go:12:1:12:55 | suppression range |
+| test.go:13:8:13:37 | comment |  codeql[@expires:2017-06-11] | codeql[@expires:2017-06-11] | test.go:13:1:13:37 | suppression range |
+| test.go:14:8:14:74 | comment |  codeql[go/redundant-operation] because I know better than codeql | codeql[go/redundant-operation] | test.go:14:1:14:74 | suppression range |
+| test.go:15:8:15:27 | comment |  codeql: blah blah | codeql | test.go:15:1:15:27 | suppression range |
+| test.go:16:8:16:41 | comment |  codeql blah blah #falsepositive | codeql | test.go:16:1:16:41 | suppression range |
+| test.go:17:8:17:41 | comment | codeql  [go/redundant-operation] | codeql  [go/redundant-operation] | test.go:17:1:17:41 | suppression range |
+| test.go:18:8:18:19 | comment |  codeql  | codeql | test.go:18:1:18:19 | suppression range |
+| test.go:19:8:19:18 | comment |  codeql[] | codeql[] | test.go:19:1:19:18 | suppression range |
+| test.go:21:8:21:15 | comment | codeql | codeql | test.go:21:1:21:15 | suppression range |
+| test.go:22:8:22:16 | comment | \tcodeql | codeql | test.go:22:1:22:16 | suppression range |
+| test.go:23:8:23:42 | comment |  codeql\t[go/redundant-assignment] | codeql\t[go/redundant-assignment] | test.go:23:1:23:42 | suppression range |
+| test.go:26:8:26:21 | comment |  foo; codeql | codeql | test.go:26:1:26:21 | suppression range |
+| test.go:27:8:27:46 | comment |  foo; codeql[go/redundant-assignment] | codeql[go/redundant-assignment] | test.go:27:1:27:46 | suppression range |
+| test.go:29:8:29:45 | comment |  foo codeql[go/redundant-assignment] | codeql[go/redundant-assignment] | test.go:29:1:29:45 | suppression range |
+| test.go:31:8:31:49 | comment |  foo codeql[go/redundant-assignment] bar | codeql[go/redundant-assignment] | test.go:31:1:31:49 | suppression range |
+| test.go:32:8:32:17 | comment |  codeql! | codeql | test.go:32:1:32:17 | suppression range |
+| test.go:33:8:33:41 | comment |  codeql[go/redundant-assignment] | codeql[go/redundant-assignment] | test.go:33:1:33:41 | suppression range |
+| test.go:34:8:34:76 | comment |  codeql[go/redundant-assignment] and codeql[go/redundant-operation] | codeql[go/redundant-assignment] | test.go:34:1:34:76 | suppression range |
+| test.go:34:8:34:76 | comment |  codeql[go/redundant-assignment] and codeql[go/redundant-operation] | codeql[go/redundant-operation] | test.go:34:1:34:76 | suppression range |
+| test.go:35:8:35:49 | comment |  codeql[go/redundant-assignment]; codeql | codeql | test.go:35:1:35:49 | suppression range |
+| test.go:35:8:35:49 | comment |  codeql[go/redundant-assignment]; codeql | codeql[go/redundant-assignment] | test.go:35:1:35:49 | suppression range |
+| test.go:36:8:36:21 | comment |  codeql[]  | codeql[] | test.go:36:1:36:21 | suppression range |
+| test.go:37:8:37:44 | comment |  codeql[go/redundant-assignment]  | codeql[go/redundant-assignment] | test.go:37:1:37:44 | suppression range |
+| test.go:43:8:43:58 | comment |  codeql[@tag:nullness,go/redundant-assignment]  | codeql[@tag:nullness,go/redundant-assignment] | test.go:43:1:43:58 | suppression range |
+| test.go:44:8:44:34 | comment |  codeql[@tag:nullness]  | codeql[@tag:nullness] | test.go:44:1:44:34 | suppression range |

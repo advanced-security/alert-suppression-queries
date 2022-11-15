@@ -1,0 +1,6 @@
+name: advanced-security-demo/javascript-tests
+dependencies:
+  "codeql/javascript-all": "0.3.3"
+  "advanced-security-demo/javascript-alert-suppression": "0.0.1"
+extractor: javascript
+tests: .
