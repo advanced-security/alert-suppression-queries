@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "[go-tmp source archive]",
+			"uri": "codeql-zip-archive://0-71/Users/shadylady/source/alert-suppression-queries-poc/go/go-tmp/src.zip"
+		},
+		{
+			"name": "[python-temp source archive]",
+			"uri": "codeql-zip-archive://0-85/Users/shadylady/source/alert-suppression-queries-poc/python/test/python-temp/src.zip"
+		}
+	],
+	"settings": {}
+}

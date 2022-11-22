@@ -1,0 +1,25 @@
+---
+version: 1
+ownership:
+  - name: alert-suppression-queries
+    long_name: Alert Suppression Queries - CodeQL Packs
+    description: This repository provides CodeQL packs for Alert Suppression queries for each supported language.
+    kind: logical
+    maintainer: s-samadi
+    team: github/ps-advanced-security
+    exec_sponsor: eanderson
+    product_manager:
+    repo: https://github.com/advanced-security/alert-suppression-queries
+    team_slack:
+    ops_slack:
+    sev1:
+      issue: https://github.com/advanced-security/alert-suppression-queries/issues
+      tta: best_effort
+    sev2:
+      issue: https://github.com/advanced-security/alert-suppression-queries/issues
+      tta: best_effort
+    sev3:
+      issue: https://github.com/advanced-security/alert-suppression-queries/issues
+      tta: best_effort
+    qos: best_effort
+    tier: 3
